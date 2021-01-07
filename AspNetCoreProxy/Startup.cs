@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Identity.Web;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace AspNetCoreProxy
 {
@@ -16,6 +18,12 @@ namespace AspNetCoreProxy
 
         public void ConfigureServices(IServiceCollection services)
         {
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+            // IdentityModelEventSource.ShowPII = true;
+            // JwtSecurityTokenHandler.DefaultMapInboundClaims = false;
+
+            services.AddMicrosoftIdentityWebApiAuthentication(Configuration);
+
             services.AddReverseProxy()
                 .LoadFromConfig(Configuration.GetSection("ReverseProxy"));
         }
@@ -24,6 +32,7 @@ namespace AspNetCoreProxy
         {
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
