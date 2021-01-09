@@ -28,7 +28,7 @@ namespace AspNetCoreProxy
                 .LoadFromConfig(Configuration.GetSection("ReverseProxy"));
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
             app.UseRouting();
 
