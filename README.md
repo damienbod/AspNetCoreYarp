@@ -1,6 +1,6 @@
 # ASP.NET Core & Yarp
 
-![Build Status](https://github.com/damienbod/AspNetCoreYarp/workflows/AspNetCoreYarp-build/badge.svg?branch=main)
+![.NET](https://github.com/damienbod/AspNetCoreYarp/workflows/.NET/badge.svg)
 
 ## Blogs
 
