@@ -1,6 +1,6 @@
 # ASP.NET Core & Yarp
 
-![.NET](https://github.com/damienbod/AspNetCoreYarp/workflows/.NET/badge.svg)
+[![.NET](https://github.com/damienbod/AspNetCoreYarp/workflows/.NET/badge.svg)](https://github.com/damienbod/AspNetCoreYarp/actions?query=workflow%3A.NET) 
 
 ## Blogs
 
