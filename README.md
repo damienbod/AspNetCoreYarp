@@ -1,5 +1,7 @@
 # ASP.NET Core & Yarp
 
+![Build Status](https://github.com/damienbod/AspNetCoreYarp/workflows/AspNetCoreYarp-build/badge.svg?branch=main)
+
 ## Blogs
 
 Protecting legacy APIs with an ASP.NET Core Yarp reverse proxy and Azure AD OAuth
