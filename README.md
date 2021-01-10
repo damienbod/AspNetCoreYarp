@@ -1,6 +1,10 @@
 # ASP.NET Core & Yarp
 
-# Links
+## Blogs
+
+Protecting legacy APIs with an ASP.NET Core Yarp reverse proxy and Azure AD OAuth
+
+## Links
 
 https://microsoft.github.io/reverse-proxy/articles/getting_started.html
 
