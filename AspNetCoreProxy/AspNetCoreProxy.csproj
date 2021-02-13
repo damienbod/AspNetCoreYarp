@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.ReverseProxy" Version="1.0.0-preview.8.21065.1" />
-    <PackageReference Include="Microsoft.Identity.Web" Version="1.5.1" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="1.6.0" />
   </ItemGroup>
 
 </Project>
