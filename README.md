@@ -10,6 +10,8 @@ https://damienbod.com/2021/01/11/protecting-legacy-apis-with-an-asp-net-core-yar
 
 ## History
 
+2021-02-17 Updated Microsoft.ReverseProxy 1.0.0-preview.9.21116.1
+
 2021-02-13 Updated nuget packages
 
 2021-01-28 Updated nuget packages
