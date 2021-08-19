@@ -24,7 +24,7 @@ https://damienbod.com/2021/01/11/protecting-legacy-apis-with-an-asp-net-core-yar
 
 ## Links
 
-https://microsoft.github.io/reverse-proxy/articles/getting_started.html
+https://microsoft.github.io/reverse-proxy/articles/getting-started.html
 
 https://github.com/microsoft/reverse-proxy
 
