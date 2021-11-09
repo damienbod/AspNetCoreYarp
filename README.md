@@ -10,6 +10,8 @@ https://damienbod.com/2021/01/11/protecting-legacy-apis-with-an-asp-net-core-yar
 
 ## History
 
+2021-11-09 Updatd to .NET 6
+
 2021-08-19 Updated packages
 
 2021-04-04 Updated to Yarp.ReverseProxy nuget packages and  Microsoft.Identity.Web 1.8.2
