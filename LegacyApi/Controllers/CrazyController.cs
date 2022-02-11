@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 
 namespace LegacyApi.Controllers;
@@ -8,13 +7,6 @@ namespace LegacyApi.Controllers;
 [Route("api/[controller]")]
 public class CrazyController : ControllerBase
 {
-    private readonly ILogger<CrazyController> _logger;
-
-    public CrazyController(ILogger<CrazyController> logger)
-    {
-        _logger = logger;
-    }
-
     [HttpGet]
     public IEnumerable<string> Get()
     {
