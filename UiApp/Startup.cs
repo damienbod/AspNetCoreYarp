@@ -1,10 +1,5 @@
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Authorization;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 
@@ -27,7 +22,7 @@ public class Startup
 
         services.AddOptions();
 
-        string[] initialScopes = Configuration.GetValue<string>("AspNetCoreProxy:ScopeForAccessToken")?.Split(' ');
+        string[]? initialScopes = Configuration.GetValue<string>("AspNetCoreProxy:ScopeForAccessToken")?.Split(' ');
 
         services.AddMicrosoftIdentityWebAppAuthentication(Configuration)
             .EnableTokenAcquisitionToCallDownstreamApi(initialScopes)

@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Identity.Web;
 using Newtonsoft.Json.Linq;
-using System.Threading.Tasks;
 
 namespace UIApp.Pages;
 
@@ -10,7 +9,8 @@ public class CallApiModel : PageModel
 {
     private readonly LegacyViaProxyService _apiService;
 
-    public JArray DataFromApi { get; set; }
+    public JArray DataFromApi { get; set; } = new JArray();
+
     public CallApiModel(LegacyViaProxyService apiService)
     {
         _apiService = apiService;
