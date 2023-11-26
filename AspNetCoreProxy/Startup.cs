@@ -1,5 +1,5 @@
 using Microsoft.Identity.Web;
-using System.IdentityModel.Tokens.Jwt;
+using Microsoft.IdentityModel.JsonWebTokens;
 
 namespace AspNetCoreProxy;
 
@@ -14,9 +14,8 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
+        JsonWebTokenHandler.DefaultInboundClaimTypeMap.Clear();
         // IdentityModelEventSource.ShowPII = true;
-        // JwtSecurityTokenHandler.DefaultMapInboundClaims = false;
 
         services.AddMicrosoftIdentityWebApiAuthentication(Configuration);
 
