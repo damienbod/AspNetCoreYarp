@@ -1,5 +1,4 @@
-﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.Identity.Web;
+﻿using Microsoft.Identity.Web;
 using Newtonsoft.Json.Linq;
 using System.Net.Http.Headers;
 
@@ -11,8 +10,8 @@ public class LegacyViaProxyService
     private readonly ITokenAcquisition _tokenAcquisition;
     private readonly IConfiguration _configuration;
 
-    public LegacyViaProxyService(IHttpClientFactory clientFactory, 
-        ITokenAcquisition tokenAcquisition, 
+    public LegacyViaProxyService(IHttpClientFactory clientFactory,
+        ITokenAcquisition tokenAcquisition,
         IConfiguration configuration)
     {
         _clientFactory = clientFactory;
@@ -25,7 +24,7 @@ public class LegacyViaProxyService
         var client = _clientFactory.CreateClient();
 
         var scope = _configuration["AspNetCoreProxy:ScopeForAccessToken"];
-        if(scope == null) throw new ArgumentException(nameof(scope));
+        if (scope == null) throw new ArgumentException(nameof(scope));
 
         var accessToken = await _tokenAcquisition.GetAccessTokenForUserAsync(new[] { scope });
 
