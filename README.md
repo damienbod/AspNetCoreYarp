@@ -10,6 +10,7 @@ https://damienbod.com/2021/01/11/protecting-legacy-apis-with-an-asp-net-core-yar
 
 ## History
 
+- 2024-09-12 Updated packages
 - 2024-03-02 Updated packages
 - 2023-11-26 Updated .NET 8
 - 2023-11-03 Updated packages
