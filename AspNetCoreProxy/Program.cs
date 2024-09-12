@@ -1,16 +1,24 @@
-namespace AspNetCoreProxy;
+using Microsoft.Identity.Web;
+using Microsoft.IdentityModel.JsonWebTokens;
 
-public class Program
-{
-    public static void Main(string[] args)
-    {
-        CreateHostBuilder(args).Build().Run();
-    }
+var builder = WebApplication.CreateBuilder(args);
+var services = builder.Services;
 
-    public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-                webBuilder.UseStartup<Startup>();
-            });
-}
+services.AddMicrosoftIdentityWebApiAuthentication(builder.Configuration);
+
+services.AddReverseProxy()
+    .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"));
+
+var app = builder.Build();
+
+JsonWebTokenHandler.DefaultInboundClaimTypeMap.Clear();
+// IdentityModelEventSource.ShowPII = true;
+
+app.UseRouting();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapReverseProxy();
+
+app.Run();
